@@ -12,7 +12,7 @@ cocktails << Cocktail.create({
   })
 
 cocktails << Cocktail.create({
-    name: "Sex on the beach"
+    name: "JB on the beach"
   })
 
 puts 'Finished!'
