@@ -1,8 +1,13 @@
 <h1> ALL OUR COCKTAILS </h1>
 
+<%= link_to "Add a new cocktail", new_cocktail_path, class: "btn btn-success" %>
+
   <% @cocktails.each do |cocktail| %>
     <p><%= cocktail.name %></p>
+    <%= link_to "View details", cocktail_path(cocktail), class: "btn btn-primary" %>
+    <%= link_to "View ingredients", cocktail_ingredients_path(cocktail), class: "btn btn-primary" %>
+    <%= link_to "View doses", cocktail_path(cocktail), class: "btn btn-primary" %>
+
   <% end %>
 
-<h2>Ils sont où?</h2>
-<h2>Ils sont où?</h2>
+
