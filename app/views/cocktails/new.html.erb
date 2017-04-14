@@ -4,7 +4,7 @@
 
       <h3>Your cocktail name</h3>
           <%= simple_form_for [@cocktail] do |f| %>
-            <%= f.input :name %>
+            <%= f.input :name, :class => "width: 50px;"%>
             <%= f.submit "Add this cocktail", class: "btn btn-success"  %>
           <% end %>
            <%= link_to "Back", cocktails_path, class: "btn btn-danger" %>
