@@ -3,10 +3,11 @@
 <h1>Cocktail details</h1>
 
 <%= @cocktail.name %>
-<% @cocktails.each do |cocktail| %>
-      <p><%= cocktail.name %></p>
-      <%= link_to "View the cocktail", cocktail_path(cocktail), class: "btn btn-primary" %>
-      <% end %>
+<% @cocktail.doses.each do |dose| %>
+  <%= dose.ingredient.name %>
+<% end %>
+
+
 
 <br>
 <%= link_to "Back to main menu", cocktails_path, class: "btn btn-primary" %>
