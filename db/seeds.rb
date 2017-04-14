@@ -7,28 +7,34 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 cocktails = []
-cocktails << Cocktail.create({
+cocktails << Cocktail.create!({
     name: "Caipirinha"
   })
 
-cocktails << Cocktail.create({
+cocktails << Cocktail.create!({
     name: "JB on the beach"
   })
 
 puts 'Finished!'
 
 ingredients = []
-ingredients << Ingredient.create({
+ingredients << Ingredient.create!({
     name: "Lemon"
   })
-ingredients << Ingredient.create({
+ingredients << Ingredient.create!({
     name: "Sugar"
   })
 
-
 puts 'Finished!'
 
-
+lemon_id = ingredients.first.id
+caipirinha_id = cocktails.first.id
+Dose.create!({
+  description: "cachaça",
+  ingredient_id: lemon_id,
+  cocktail_id: caipirinha_id
+  })
+puts 'Finished!'
 
 
 
