@@ -4,10 +4,15 @@
 
       <h3>Your cocktail name</h3>
           <%= simple_form_for [@cocktail] do |f| %>
-            <%= f.input :name, :class => "width: 50px;"%>
+            <%= f.input :name, input_html: { style: "width: 400px; align-text: center"} %>
+            <%= f.input :photo, input_html: { style: "width: 400px; align-text: center"} %>
+            <%= f.input :photo_cache, as: :hidden %>
+            <%= cl_image_tag @cocktail.photo, height: 100, width: 80, crop: :fill %>
+
             <%= f.submit "Add this cocktail", class: "btn btn-success"  %>
           <% end %>
            <%= link_to "Back", cocktails_path, class: "btn btn-danger" %>
+
 
 
   </div>

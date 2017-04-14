@@ -1,4 +1,6 @@
 @import "home";
+@import "new";
+
 
 .container {
     text-align: center;
@@ -11,7 +13,16 @@
 
 .p {
   font-family: "Open Sans";
-
 }
+
+.form {
+  text-align: center;
+}
+
+.banner-content {
+  margin-top: 100px;
+}
+
+
 
 
