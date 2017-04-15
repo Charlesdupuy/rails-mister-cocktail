@@ -13,19 +13,22 @@
   </div>
 
 
-
-<div class="container">
-  <div class="row">
-    <% @cocktails.each do |cocktail| %>
-      <div class='col-xs-12 col-sm-4'>
-        <div class="card" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('background.jpg');">
-          <div class='card-description'>
-            <p><%= cocktail.name %></p>
+<div class="wrapper">
+  <div class="container">
+    <div class="flexbox">
+      <div class="row">
+        <% @cocktails.each do |cocktail| %>
+          <div class='col-xs-12 col-sm-4'>
+            <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2))">
+              <div class='card-description'>
+                <p><%= cocktail.name %></p>
+              </div>
+                <%= link_to "View this cocktail", cocktail_path(cocktail), class: "btn btn-primary" %>
+            </div>
           </div>
-            <%= link_to "View this cocktail", cocktail_path(cocktail), class: "btn btn-primary" %>
+        <% end %>
         </div>
       </div>
-    <% end %>
   </div>
 </div>
 

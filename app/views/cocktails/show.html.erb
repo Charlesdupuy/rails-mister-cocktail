@@ -2,18 +2,15 @@
 
 <h1>Cocktail details</h1>
 
-<%= @cocktail.name %>
-<% @cocktail.doses.each do |dose| %>
-  <%= dose.ingredient.name %>
-<% end %>
+  <%= @cocktail.name %>
+    <% @cocktail.doses.each do |dose| %>
+    <br>
+      <%= dose.ingredient.name %>
+  <% end %>
 
-<br>
-<%= cl_image_tag @cocktail.photo, height: 100, width: 100, crop: :fill %>
-
-<br>
-<%= link_to "Back to main menu", cocktails_path, class: "btn btn-primary" %>
-<%= button_to "Delete this cocktail", cocktail_path, method: :delete, class: "btn btn-danger" %>
-
-
+  <br>
+  <%= cl_image_tag @cocktail.photo, class: "img-thumbnail", height: 100, width: 100, crop: :fill %>
+  <%= link_to "Back to main menu", cocktails_path, class: "btn btn-primary" %>
+  <%= button_to "Delete this cocktail", cocktail_path, method: :delete, class: "btn btn-danger" %>
 
 </div>

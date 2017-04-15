@@ -3,9 +3,21 @@
 
 
 .container {
-    text-align: center;
     font-family: "Open Sans", "Helvetica", "sans-serif";
-  }
+    background: rgb(240,240,240);
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+
+.row {
+  width: 1050px;
+}
+
+.flexbox {
+  display: flex;
+  justify-content: space-between;
+}
 
 .btn {
   margin: 20px;
@@ -22,6 +34,8 @@
 .banner-content {
   margin-top: 100px;
 }
+
+
 
 
 
