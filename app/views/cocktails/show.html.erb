@@ -1,16 +1,18 @@
-<div class="container">
+<div class="wrapper">
+  <div class="container">
 
-<h1>Cocktail details</h1>
+    <h1>Cocktail details</h1>
 
-  <%= @cocktail.name %>
-    <% @cocktail.doses.each do |dose| %>
-    <br>
-      <%= dose.ingredient.name %>
-  <% end %>
+      <%= @cocktail.name %>
 
-  <br>
-  <%= cl_image_tag @cocktail.photo, class: "img-thumbnail", height: 100, width: 100, crop: :fill %>
-  <%= link_to "Back to main menu", cocktails_path, class: "btn btn-primary" %>
-  <%= button_to "Delete this cocktail", cocktail_path, method: :delete, class: "btn btn-danger" %>
+      <% @cocktail.doses.each do |dose| %>
+      <br>
+        <%= dose.ingredient.name %>
+    <% end %>
 
+    <%= cl_image_tag @cocktail.photo, class: "img-thumbnail", height: 100, width: 100, crop: :fill %>
+    <%= link_to "Back to main menu", cocktails_path, class: "btn btn-primary" %>
+    <%= button_to "Delete this cocktail", cocktail_path, method: :delete, class: "btn btn-danger" %>
+
+  </div>
 </div>

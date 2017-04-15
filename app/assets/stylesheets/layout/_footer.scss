@@ -1,40 +1,22 @@
-.bg-primary {
- background-color: #000 !important;
+#footer {
+  background: $gray-darker;
+  padding: 30px 0;
+  color: #CCCCCC;
 }
-
-.bg-circle
-{
-  display: inline-block;
-  width: 60px;
-  height: 60px;
-  padding: 14px 4px;
-  color: #ececec;
-  text-align: center;
-  border-radius: 50%;
+#footer p {
+  margin-top: 17px;
+  font-size: 20px;
 }
-
-.bg-circle-outline
-{
-  width: 50px;
-  height: 50px;
-  color:smoke;
-  padding: 8px 2px;
-  border: 2px solid;
-  border-color: smoke;
-  border-radius: 50%;
+#footer ul {
+  margin-top: 10px;
 }
-
-
-.bg-circle a, a:hover, .media a:focus
-{
-  text-decoration: none !important;
-  outline: none;
-  color: #ececec;
+#footer a {
+  color: $gray-light;
+  font-size: 20px;
+  letter-spacing: 20px;
+  transition: color 0.5s ease;
 }
-.bg-circle-outline a, a:hover, .media a:focus
-{
-  text-decoration: none !important;
-  outline: none;
-  color: #ececec;
+#footer a:hover{
+  color: #2381D0;
 }
 
