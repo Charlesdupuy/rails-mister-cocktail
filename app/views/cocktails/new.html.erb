@@ -1,5 +1,6 @@
-<div class="container">
-  <div class="row">
+<div class="wrapper">
+  <div class="container">
+
 
       <h3>Your cocktail name</h3>
 
@@ -8,12 +9,17 @@
         <%= simple_form_for @cocktail do |f| %>
 
           <%= f.input :name, input_html: { placeholder: "C'est quoi ton cocktail préféré?" } %>
+
           <%= f.input :photo, input_html: { style: "width: 400px; align-text: center"} %>
           <%= f.input :photo_cache, as: :hidden %>
 
           <%= f.submit "Add this cocktail", class: "btn btn-success" %>
           <%= link_to "Get back!", cocktails_path, class: "btn btn-danger" %>
 
+
       <% end %>
+
+
   </div>
 </div>
+
